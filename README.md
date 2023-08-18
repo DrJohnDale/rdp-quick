@@ -108,7 +108,6 @@ down_sampled_p = rdp_num_windows(p, epsilon, num_osc)
 print(down_sampled_p.shape, p.shape)
 ```
 
-
 ## examples
 https://github.com/DrJohnDale/rdp-quick/blob/main/example.py 
 https://github.com/DrJohnDale/rdp-quick/blob/main/example_curvature.py
