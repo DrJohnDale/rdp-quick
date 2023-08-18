@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="rdp-quick",
-    version="1.0.1",
+    version="1.0.2",
     author="Dr John Dale",
     url="https://github.com/DrJohnDale/rdp-quick",
     description="fast implementation of Ramer-Douglas-Peucker",

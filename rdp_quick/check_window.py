@@ -9,8 +9,8 @@ from rdp_quick.compute_distance import compute_distance, _rdp_quick_use_cache_
 def check_window(p_array: npt.NDArray[float], epsilon: float) -> typing.Tuple[bool, int]:
     """
     Check if the given window.  The line is made from the first and last point.
-    :param p_array: the points to check
-    :param epsilon: the threshold to test against
+    :param p_array: the points to check (must be of type float64 and 2D)
+    :param epsilon: the threshold to test against (must be of type float64)
     :return: if any distance is greater than epsilon False, max_index, if all withing epsilon then False, 0
     """
     if p_array.shape[0] <= 2:
@@ -27,8 +27,8 @@ def check_window(p_array: npt.NDArray[float], epsilon: float) -> typing.Tuple[bo
 def check_windows(p_array: npt.NDArray[float], epsilon: float, windows: typing.List[typing.Tuple[int, int]], p_array_ok: npt.NDArray[bool]):
     """
     test all the current windows, if any do not pass the test then create the new windows
-    :param p_array: The data points
-    :param epsilon: The threshold
+    :param p_array: The data points (must be of type float64 and 2D)
+    :param epsilon: The threshold (must be of type float64)
     :param windows: the initial windows
     :param p_array_ok: Which points are accepted
     :return: a list of new windows

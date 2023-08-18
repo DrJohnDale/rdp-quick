@@ -10,8 +10,8 @@ _rdp_quick_use_cache_ = True
 def _compute_distance_single_point(p1: npt.NDArray[float], p_array: npt.NDArray[float]) -> npt.NDArray[float]:
     """
     compute distance from a single point
-    :param p1: the point to compute the distance from
-    :param p_array: the points to compute the distance to
+    :param p1: the point to compute the distance from (must be of type float64)
+    :param p_array: the points to compute the distance to (must be of type float64 and 2D)
     :return: the distances
     """
     num_points = len(p_array)
@@ -27,10 +27,10 @@ def _compute_distance_2d(p1: npt.NDArray[float], p_array: npt.NDArray[float], de
                          norm_delta_start_end: float) -> npt.NDArray[float]:
     """
     Compute the distance to the line with 2d points
-    :param p1: the initial point
-    :param p_array: the point to compute the distance to
-    :param delta_start_end: the vector difference between the start and the end point
-    :param norm_delta_start_end: the normal of the vector between the start and end point
+    :param p1: the initial point (must be of type float64)
+    :param p_array: the point to compute the distance to (must be of type float64 and 2D)
+    :param delta_start_end: the vector difference between the start and the end point (must be of type float64)
+    :param norm_delta_start_end: the normal of the vector between the start and end point (must be of type float64)
     :return: an array of distances
     """
     num_points = len(p_array)
@@ -46,10 +46,10 @@ def _compute_distance_nd(p1: npt.NDArray[float], p_array: npt.NDArray[float], de
                          norm_delta_start_end: float) -> npt.NDArray[float]:
     """
     Compute the distance to the line with nd points
-    :param p1: the initial point
-    :param p_array: the point to compute the distance to
-    :param delta_start_end: the vector difference between the start and the end point
-    :param norm_delta_start_end: the normal of the vector between the start and end point
+    :param p1: the initial point (must be of type float64)
+    :param p_array: the point to compute the distance to (must be of type float64 and 2D)
+    :param delta_start_end: the vector difference between the start and the end point (must be of type float64)
+    :param norm_delta_start_end: the normal of the vector between the start and end point (must be of type float64)
     :return: an array of distances
     """
     num_points = len(p_array)
@@ -64,9 +64,9 @@ def _compute_distance_nd(p1: npt.NDArray[float], p_array: npt.NDArray[float], de
 def compute_distance(p1: npt.NDArray[float], p2: npt.NDArray[float], p_array: npt.NDArray[float]) -> npt.NDArray[float]:
     """
     Compute the distances to the points from a line made from p1 and p1
-    :param p1: The start point
-    :param p2: The end point
-    :param p_array: The points to compute the distance to
+    :param p1: The start point (must be of type float64)
+    :param p2: The end point (must be of type float64)
+    :param p_array: The points to compute the distance to (must be of type float64 and 2D)
     :return: an array of distances
     """
     p1_equal_p2 = np.all(np.equal(p1, p2))

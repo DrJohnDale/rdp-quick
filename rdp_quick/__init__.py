@@ -9,8 +9,8 @@ def rdp_initial_windows(p_array: npt.NDArray[float], epsilon: float,
                         initial_windows: typing.List[typing.Tuple[int, int]]) -> npt.NDArray[float]:
     """
     Computes the new points based starting with the windows given
-    :param p_array: the data points
-    :param epsilon: the threshold
+    :param p_array: the data points (must be of type float64 and 2D)
+    :param epsilon: the threshold (must be of type float64)
     :param initial_windows: the initial windows
     :return: The down sampled points
     """
@@ -26,8 +26,8 @@ def rdp_initial_windows(p_array: npt.NDArray[float], epsilon: float,
 def rdp_single_initial_window(p_array: npt.NDArray[float], epsilon: float) -> npt.NDArray[float]:
     """
     Computes the new points based starting with one window over all the points
-    :param p_array: the data points
-    :param epsilon: the threshold
+    :param p_array: the data points (must be of type float64 and 2D)
+    :param epsilon: the threshold (must be of type float64)
     :return: The down sampled points
     """
     windows = [(0, len(p_array)-1)]
@@ -56,8 +56,8 @@ def get_initial_windows(num_points: int, num_windows: int,
 def rdp_num_windows(p_array: npt.NDArray[float], epsilon: float, num_windows) -> npt.NDArray[float]:
     """
     Computes the new points starting with the given number of windows
-    :param p_array: the data points
-    :param epsilon: the threshold
+    :param p_array: the data points (must be of type float64 and 2D)
+    :param epsilon: the threshold (must be of type float64)
     :param num_windows: the initial number of windows
     :return: The down sampled points
     """
@@ -72,8 +72,8 @@ def rdp_num_windows(p_array: npt.NDArray[float], epsilon: float, num_windows) ->
 def rdp_points_per_window(p_array: npt.NDArray[float], epsilon: float, points_per_window) -> npt.NDArray[float]:
     """
     Computes the new points starting with windows of length points_per_window
-    :param p_array: the data points
-    :param epsilon: the threshold
+    :param p_array: the data points (must be of type float64 and 2D)
+    :param epsilon: the threshold (must be of type float64)
     :param points_per_window: the initial number of points per window
     :return: The down sampled points
     """
@@ -93,8 +93,8 @@ def rdp_windows_from_curvature(p_array: npt.NDArray[float], epsilon: float,
 
     The curvature calculation will only use the first two columns as x and y, other dimensions will be ignored
 
-    :param p_array: the data points
-    :param epsilon: the threshold
+    :param p_array: the data points (must be of type float64 and 2D)
+    :param epsilon: the threshold (must be of type float64)
     :param gradient_nargs: any named arguments to pass to the numpy.gradient function
     :param peak_find_nargs: any named arguments to pass to the scipy.signal.find_peaks function
     :return: The down sampled points

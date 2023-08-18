@@ -7,8 +7,8 @@ from scipy.signal import find_peaks
 def compute_curvature_2d(x: npt.NDArray[float], y: npt.NDArray[float], gradient_nargs: typing.Union[dict, None] = None) -> npt.NDArray[float]:
     """
     Computes the curvature of the line made of the points x and y
-    :param x: the x-axis points
-    :param y: the y-axis points
+    :param x: the x-axis points (1D array)
+    :param y: the y-axis points (1D array)
     :param gradient_nargs: any named arguments to pass to the gradient function
     :return: the curvature for each point
     """
@@ -26,8 +26,8 @@ def compute_curvature_and_build_windows(x: npt.NDArray[float], y: npt.NDArray[fl
                                         peak_find_nargs: typing.Union[dict, None] = None) -> typing.List[typing.Tuple[int, int]]:
     """
     Computes the curvature and then finds the peaks which are then used to determine the initial windows
-    :param x: the x-axis points
-    :param y: the y-axis points
+    :param x: the x-axis points (1D array)
+    :param y: the y-axis points (1D array)
     :param gradient_nargs: any named arguments to pass to the numpy.gradient function
     :param peak_find_nargs: any named arguments to pass to the scipy.signal.find_peaks function
     :return: the initial windows
