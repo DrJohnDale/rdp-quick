@@ -1,6 +1,8 @@
 # rdp-quick
 
-There are several implementations of the Ramer-Douglas-Peucker, however, they can be slow
+The Ramer-Douglas-Peucker algorithm can be used to decimate a curve into a similar curve with fewer points. (https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm)
+
+There are several python implementations of the Ramer-Douglas-Peucker algorithm, however, they can be slow
 for large datasets
 
 In this library the Ramer-Douglas-Peucker is implemented using Numba (with eager compilation and cache) to speed up the algorithm
@@ -111,8 +113,8 @@ print(down_sampled_p.shape, p.shape)
 ```
 
 ## examples
-https://github.com/DrJohnDale/rdp-quick/blob/main/example.py 
-https://github.com/DrJohnDale/rdp-quick/blob/main/example_curvature.py
+- https://github.com/DrJohnDale/rdp-quick/blob/main/example.py
+- https://github.com/DrJohnDale/rdp-quick/blob/main/example_curvature.py
 
 ### Development
 - Clone the repo
