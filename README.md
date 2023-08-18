@@ -110,7 +110,8 @@ print(down_sampled_p.shape, p.shape)
 
 
 ## examples
-see 
+https://github.com/DrJohnDale/rdp-quick/blob/main/example.py 
+https://github.com/DrJohnDale/rdp-quick/blob/main/example_curvature.py
 
 ### Development
 - Clone the repo
