@@ -40,7 +40,9 @@ A more advanced method is to first compute the curvature and find peaks and use 
 
 For large datasets this should be much quicker than the basic usage
 
-This method uses numpy gradient and scipy.signal find_peaks. Both these methods can use a number of named arguments.  If you want to set these us the input dictionaries ```gradient_nargs``` and ```find_peaks_nargs``` 
+This method uses numpy gradient and scipy.signal find_peaks. Both these methods can use a number of named arguments.  
+If you want to set these use the input dictionaries ```gradient_nargs``` and ```find_peaks_nargs``` in ```rdp_windows_from_curvature```
+
 ```python
 from rdp_quick import rdp_windows_from_curvature
 import numpy as np
